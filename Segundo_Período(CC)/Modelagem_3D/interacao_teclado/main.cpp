@@ -3,6 +3,13 @@
 #include<GL/freeglut.h>
 #include<iostream>
 
+GLfloat escalaX = 1;
+GLfloat escalaY = 1;
+GLfloat TranslateX = 1;
+GLfloat TranslateY = 1;
+GLfloat rotateX = 1;
+GLfloat rotateY = 1;
+
 void desenha(void)
 {
     glClear( GL_COLOR_BUFFER_BIT );
@@ -11,14 +18,14 @@ void desenha(void)
     glMatrixMode(GL_PROJECTION);
     //Atribui a matriz de transformacao da camera a matriz de identidade
     glLoadIdentity();
-    gluOrtho2D(-20, 20, -20, 20); // define a área de enquadramento da cena
+    gluOrtho2D(-20, 20, -20, 20); // define a Ã¡rea de enquadramento da cena
 
     glMatrixMode(GL_MODELVIEW); //Seta definicao da matriz de trasformacao de modelos camera
     glLoadIdentity(); //Atribui a matriz de transformacao de modelo da cena a matriz identidade
 
-    glTranslatef(0.0f, 0.0f, 0.0f);//define a transformacao de translacao (mudar de lugar)
-    glScalef(escala, escala, 0); //muda a escala do desenho
-    glRotatef(45.0f, 1.0f, 1.0f, 0.0f); //rotaciona em angulo
+    glTranslatef(TranslateX, TranslateY, 0.0f);//define a transformacao de translacao (mudar de lugar)
+    glScalef(escalaX, escalaY, 0); //muda a escala do desenho
+    glRotatef(45.0f, rotateX, rotateY, 0.0f); //rotaciona em angulo
 
     glLineWidth(5);
     glColor3f(1.0f,0.5f,0.5f);
@@ -48,7 +55,7 @@ void desenha(void)
     glVertex2f(-6, 8); //linha de cima / horizontal
     glVertex2f(-2, 8);
 
-    glVertex2f(-6, 4); //linha do meio (traço) / horizontal
+    glVertex2f(-6, 4); //linha do meio (traÃ§o) / horizontal
     glVertex2f(-2, 4);
 
     glVertex2f(-6, 8); //linha reta da esquerda / vertical
@@ -61,7 +68,7 @@ void desenha(void)
     glVertex2f(0, 8); //linha de cima / horizontal
     glVertex2f(4, 8);
 
-    glVertex2f(0, 4); //linha do meio (traço) / horizontal
+    glVertex2f(0, 4); //linha do meio (traÃ§o) / horizontal
     glVertex2f(4, 4);
 
     glVertex2f(0, 8); //linha reta da esquerda / vertical
@@ -81,7 +88,7 @@ void desenha(void)
     glVertex2f(10, 8); //linha de cima / horizontal
     glVertex2f(6, 8);
 
-    glVertex2f(10, 4); //linha do meio (traço) / horizontal
+    glVertex2f(10, 4); //linha do meio (traÃ§o) / horizontal
     glVertex2f(6, 4);
 
     glVertex2f(10, 8); //linha reta da esquerda / vertical
@@ -91,15 +98,65 @@ void desenha(void)
     glFlush();
 }
 
-void listeningkey(unsigned char tecla, GLint x, GLint y)
+void listeningkey(unsigned char tecla, GLint x, GLint y) //PRECISA ter 3 parametros para ue seja usado de forma correta
 {
     switch(tecla)
     {
-        case '+': escala++;
+    case '+':
+        escalaX+=0.5;
+        escalaY+=0.5;
         break;
 
-        case '-': escala--;
+    case '-':
+        if(escalaX == 0 && escalaY ==0)
+        {
+            escalaX ==1;
+            escalaY==1;
+        }
+        escalaX-=0.5;
+        escalaY-=0.5;
+
         break;
+
+    case '4': //Diminui a escala em x
+        escalaX-=0.1;
+        break;
+
+    case '6': //Aumenta a escala em x
+        escalaX+=0.1;
+        break;
+
+    case '2': //Diminui a escala em y
+        escalaY-=0.1;
+        break;
+
+    case '8': //Aumenta a escala em y
+        escalaY+=0.1;
+        break;
+
+    case 'i': //Desloca para cima
+        TranslateY+=0.1;
+        break;
+
+    case 'o': //Desloca para baixo
+        TranslateY-=0.1;
+        break;
+
+    case 'p': //Desloca pra esquerda
+        TranslateX-=1;
+        break;
+    case 'r': //Desloca pra direita
+        TranslateX+=1;
+        break;
+    case 'q': //rotate antihorario
+        rotateX-=0.1;
+        rotateY -= 0.1;
+        break;
+    case 'e': //rotate no sentido horario
+        rotateX+=0.1;
+        rotateY+=0.1;
+        break;
+
     }
 
     desenha();
