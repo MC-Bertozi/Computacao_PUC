@@ -7,8 +7,9 @@ GLfloat escalaX = 1;
 GLfloat escalaY = 1;
 GLfloat TranslateX = 1;
 GLfloat TranslateY = 1;
-GLfloat rotateX = 1;
-GLfloat rotateY = 1;
+GLfloat rotateX = 0.0;
+GLfloat rotateY = 0.0;
+GLfloat angulo = 0.0;
 
 void desenha(void)
 {
@@ -25,7 +26,7 @@ void desenha(void)
 
     glTranslatef(TranslateX, TranslateY, 0.0f);//define a transformacao de translacao (mudar de lugar)
     glScalef(escalaX, escalaY, 0); //muda a escala do desenho
-    glRotatef(45.0f, rotateX, rotateY, 0.0f); //rotaciona em angulo
+    glRotatef(angulo, rotateX, rotateY, 1.0f); //rotaciona em angulo
 
     glLineWidth(5);
     glColor3f(1.0f,0.5f,0.5f);
@@ -102,17 +103,13 @@ void listeningkey(unsigned char tecla, GLint x, GLint y) //PRECISA ter 3 paramet
 {
     switch(tecla)
     {
-    case '+':
+    case '+': //aumenta as letras
+
         escalaX+=0.5;
         escalaY+=0.5;
         break;
 
-    case '-':
-        if(escalaX == 0 && escalaY ==0)
-        {
-            escalaX ==1;
-            escalaY==1;
-        }
+    case '-': //diminui as letras
         escalaX-=0.5;
         escalaY-=0.5;
 
@@ -134,27 +131,25 @@ void listeningkey(unsigned char tecla, GLint x, GLint y) //PRECISA ter 3 paramet
         escalaY+=0.1;
         break;
 
-    case 'i': //Desloca para cima
-        TranslateY+=0.1;
+    case 'w': //Desloca para cima
+        TranslateY+=1;
         break;
 
-    case 'o': //Desloca para baixo
-        TranslateY-=0.1;
+    case 's': //Desloca para baixo
+        TranslateY-=1;
         break;
 
-    case 'p': //Desloca pra esquerda
+    case 'a': //Desloca pra esquerda
         TranslateX-=1;
         break;
-    case 'r': //Desloca pra direita
+    case 'd': //Desloca pra direita
         TranslateX+=1;
         break;
-    case 'q': //rotate antihorario
-        rotateX-=0.1;
-        rotateY -= 0.1;
-        break;
     case 'e': //rotate no sentido horario
-        rotateX+=0.1;
-        rotateY+=0.1;
+        angulo-=1;
+        break;
+    case 'q': //rotate no sentido antihorario
+        angulo+=1;
         break;
 
     }
