@@ -50,7 +50,7 @@ int main()
 No *aloca(float dado)
 {
     No *aux;
-    aux = (No *) malloc(sizeof(float));
+    aux = (No *) malloc(sizeof(No));
     if(aux == NULL)
     {
         printf("Puts, a alocacao nao deu certo...");
