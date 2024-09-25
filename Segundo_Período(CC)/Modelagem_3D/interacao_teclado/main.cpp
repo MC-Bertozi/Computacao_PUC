@@ -112,6 +112,10 @@ void listeningkey(unsigned char tecla, GLint x, GLint y) //PRECISA ter 3 paramet
     case '-': //diminui as letras
         escalaX-=0.5;
         escalaY-=0.5;
+        if(escalaX < 0.1)
+            escalaX = 0.1;
+        if(escalaY < 0.1)
+            escalaY = 0.1;
 
         break;
 
