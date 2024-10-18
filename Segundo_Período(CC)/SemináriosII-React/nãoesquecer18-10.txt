@@ -1,0 +1,6 @@
+   const stypes = type.include{'/'} ? type.split ('/'0) ; {type}
+    const className = typed.map({(t)  'type-$(t.toLowerCAse())'}).join{' '}
+
+    const button = types.map{ (t) }
+
+-->Não entendi mas também não quis pagar pra poder ver o que diachos é essa porrinea
