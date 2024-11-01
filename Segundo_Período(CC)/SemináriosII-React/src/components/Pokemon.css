@@ -1,0 +1,41 @@
+img{
+    height: 200px;
+    width: 200px;
+}
+
+.onClick{
+    border-radius: 20px;
+    background-color: #bee9f8;
+}
+
+button{
+    border-radius: 20px;
+    color: #1f718f;
+    background-color:#bee9f8;
+}
+
+/*tipos*/
+
+.type-poison {
+    border-radius: 20px;
+    background-color: blueviolet;
+    color: purple;
+}
+  
+.type-grass {
+    border-radius: 20px;
+    background-color: rgb(99, 165, 105);
+    color: rgb(23, 48, 23);
+}
+  
+.type-electric {
+    border-radius: 20px;
+    background-color: rgb(255, 233, 137);
+    color: rgb(194, 126, 0);
+}
+
+.type-fire{
+    border-radius: 20px;
+    background-color: rgb(255, 87, 87);
+    color: rgb(170, 1, 1);
+}
