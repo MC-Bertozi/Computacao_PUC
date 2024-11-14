@@ -5,8 +5,8 @@
 int main(){
     FILE *f;
 
-    char filename[50] = "teste.txt"; //só o nome do arquivo
-                                      //a extensão (.txt) não muda nada, pode-se colocar qualquer extensão mas ainda sim vai
+    char filename[50] = "teste.txt"; //sÃ³ o nome do arquivo
+                                      //a extensÃ£o (.txt) nÃ£o muda nada, pode-se colocar qualquer extensÃ£o mas ainda sim vai
                                       //ser um arquivo textual
 
     char texto[100];
@@ -22,7 +22,7 @@ int main(){
     if(tam > 0 && texto[tam-1] == '\n') //pra ver se existe mesmo o \n
         texto[tam-1] = '\0'; //para que o fgets nao guarde o \n e substitua-o por \0, que indica o final da string
 
-    for(int i =0; i<strlen(texto); i++){ //usamos o strlen já que trocamos o tam da string no if anterior
+    for(int i =0; i<strlen(texto); i++){ //usamos o strlen jÃ¡ que trocamos o tam da string no if anterior
         fputc(texto[i], f); //para salvar no arquivo o texto escrito
         /*1- inteiro (tabela ASCII); 2- arquivo buffer*/
     }
