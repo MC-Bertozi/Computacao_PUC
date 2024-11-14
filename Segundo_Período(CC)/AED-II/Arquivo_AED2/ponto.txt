@@ -1,0 +1,6 @@
+1 amarelo 4.5 2.3
+2 azul -3.4 9.8
+3 roxo 0.0 0.0
+4 preto 5.2 6.1
+
+5 branco 2.30 5.60
