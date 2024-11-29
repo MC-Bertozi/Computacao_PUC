@@ -16,26 +16,147 @@ button{
 
 /*tipos*/
 
+/*POISON*/
 .type-poison {
-    border-radius: 20px;
-    background-color: blueviolet;
-    color: purple;
+    background-color: rgb(190, 121, 255);
+    color: rgb(91, 29, 150);
+}
+.type-.poison {
+    background-color: rgb(190, 121, 255);
+    color: rgb(91, 29, 150);
 }
   
+/*GRASS*/
 .type-grass {
-    border-radius: 20px;
     background-color: rgb(99, 165, 105);
     color: rgb(23, 48, 23);
 }
-  
+.type-.grass {
+    background-color: rgb(99, 165, 105);
+    color: rgb(23, 48, 23);
+}
+
+/*ELETRIC*/
 .type-electric {
-    border-radius: 20px;
     background-color: rgb(255, 233, 137);
     color: rgb(194, 126, 0);
 }
 
+/*FIRE*/
 .type-fire{
-    border-radius: 20px;
     background-color: rgb(255, 87, 87);
-    color: rgb(170, 1, 1);
+    color: rgb(100, 28, 28);
+}
+
+/*DRAGON*/
+.type-dragon{
+    background-color: rgb(6, 182, 161);
+    color: rgb(25, 73, 67);
+}
+
+/*FAIRY*/
+.type-fairy{
+    background-color: rgb(243, 173, 194);
+    color: rgb(150, 57, 73)
+}
+.type-.fairy{
+    background-color: rgb(243, 173, 194);
+    color: rgb(150, 57, 73)
+}
+
+/*WATER*/
+.type-water{
+    background-color: rgb(94, 233, 233);
+    color: rgb(40, 104, 116);
+}
+.type-.water{
+    background-color: rgb(94, 233, 233);
+    color: rgb(40, 104, 116);
+}
+/*FIGHTING*/
+.type-fighting{
+    background-color: rgb(196, 196, 196);
+    color: rgb(83, 83, 83);
+}
+.type-.fighting{
+    background-color: rgb(196, 196, 196);
+    color: rgb(83, 83, 83);
+}
+
+/*PSYCHIC*/
+.type-psychic{
+    background-color: rgb(135, 135, 211);
+    color: rgb(29, 29, 53);
+}
+.type-.psychic{
+    background-color: rgb(135, 135, 211);
+    color: rgb(29, 29, 53);
+}
+
+/*FLYING*/
+.type-flying{
+    background-color: rgb(104, 185, 212);
+    color: rgb(32,49,54);
+}
+.type-.flying{
+    background-color: rgb(104, 185, 212);
+    color: rgb(32, 49, 54);
+}
+
+/*NORMAL*/
+.type-normal{
+    background-color: rgb(245, 223, 169);
+    color:  rgb(88, 82, 51);
+}
+
+/*GHOST*/
+.type-ghost{
+    background-color: rgb(214, 214, 214);
+    color: rgb(80, 80, 80);
+}
+
+/*GROUND*/
+.type-ground{
+    background-color: rgb(199, 131, 92);
+    color: rgb(104, 60, 34);
+}
+.type-.ground{
+    background-color: rgb(199, 131, 92);
+    color: rgb(104, 60, 34);
+}
+
+/*STEEL*/
+.type-.steel{
+    background-color: rgb(245, 254, 255);
+    color: gray;
+}
+
+/*ICE*/
+.type-ice{
+    background-color: rgb(128, 220, 248);
+    color: rgb(65, 139, 161);
+}
+.type-.ice{
+    background-color: rgb(128, 220, 248);
+    color: rgb(65, 139, 161);
+}
+
+/*BUG*/
+.type-bug{
+    background-color: rgb(235, 196, 164);
+    color: rgb(153, 117, 88);
+}
+.type-.bug{
+    background-color: rgb(235, 196, 164);
+    color: rgb(153, 117, 88);
+}
+
+/*ROCK*/
+.type-rock{
+    background-color: rgb(165, 163, 163);
+    color: rgb(71, 71, 71);
+}
+.type-.rock{
+    background-color: rgb(165, 163, 163);
+    color: rgb(71, 71, 71);
 }
