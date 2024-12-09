@@ -1,0 +1,2 @@
+1 pocao_PV mais_dez_PV 1
+2 pocao_XP mais_dez_XP 2
