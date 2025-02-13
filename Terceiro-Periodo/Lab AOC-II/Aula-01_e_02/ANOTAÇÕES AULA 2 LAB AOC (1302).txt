@@ -1,0 +1,37 @@
+ANOTAÇÕES AULA 2 LAB AOC (13/02)
+------------------------------------------------------
+
+.globl -> opcional mas mostra a parte global do código
+
+.main -> função principal, ponto de entrada aonde ficam as instruções principais
+
+>>mensagem: .asciiz "\nAbuble :P"
+
+-mensagem: rótulo
+-.asciiz : "tipo" do dado, tipo String
+-"..." : String guardada
+
+>>jal imprime_int (jump & link)-> pula para a função(procedimento) imprime_int
+
+>>imprime_int:	# imprime inteiro
+	li $v0,1
+	li $a0, 35
+	syscall
+	jr $ra : jr(jump register) -> "return" // $ra
+
+>>syscall # feito! -> encerra o programa; "exit"
+-> chamada de sistema; chama funções do sistema operacional
+
+>># imprime mensagem
+
+li $v0, 4: li(load immediate) ->registrador v0 que, nesse caso, armazena o valor 4 (em C: $v0 = 4;) // 4 - mostra o 				que quer que tenha que ser feito pelo v0
+			      -> "printf"
+
+la $a0, mensagem : la(load address) -> registrador a0 que, carrega um endereço de memória, nesse caso o endereço da 				       mensagem
+syscall -> desvia a execução para o SO 
+
+li $v0, 10 -> encerra a execução usando o argumento 10 que diz o que o registrador tem que fazer
+syscall # feito!
+
+	
+>>pc -> registrador que indica aonde esta a instrução que o processador precisa
